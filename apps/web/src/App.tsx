@@ -61,36 +61,26 @@ export default function App() {
 
   return (
     <>
-      {/* Top Fixed Quick Controls */}
-      <div style={{ position: 'fixed', top: 14, right: 20, zIndex: 99, display: 'flex', gap: 8 }}>
+      {/* Floating Medieval Tavern Utility Dock (Bottom-Right, Never Obscures Header) */}
+      <aside className="tavern-control-dock" aria-label="Tavern controls">
         <button
           onClick={toggleTheme}
-          className="btn btn-secondary btn-sm"
-          style={{
-            borderRadius: 'var(--radius-sm)',
-            fontSize: 12,
-            fontWeight: 700,
-            boxShadow: 'var(--shadow-sm)',
-          }}
-          title="Switch theme"
+          className="btn btn-secondary btn-sm tavern-dock-btn"
+          title={theme === 'dark' ? 'Switch to Daylight Parchment (Light Mode)' : 'Switch to Candlelit Tavern (Night Mode)'}
         >
-          <span className="mono">{theme === 'dark' ? '☀️ LIGHT MODE' : '🌙 DARK MODE'}</span>
+          <span className="tavern-dock-icon">{theme === 'dark' ? '📜' : '🕯️'}</span>
+          <span className="tavern-dock-text">{theme === 'dark' ? 'DAYLIGHT' : 'TORCHLIGHT'}</span>
         </button>
 
         <button
           onClick={toggleAudio}
-          className="btn btn-secondary btn-sm"
-          style={{
-            borderRadius: 'var(--radius-sm)',
-            fontSize: 12,
-            fontWeight: 700,
-            boxShadow: 'var(--shadow-sm)',
-          }}
-          title="Toggle SFX"
+          className="btn btn-secondary btn-sm tavern-dock-btn"
+          title="Toggle Tavern Audio SFX"
         >
-          <span className="mono">{soundOn ? 'SFX: ON' : 'SFX: MUTED'}</span>
+          <span className="tavern-dock-icon">{soundOn ? '🔔' : '🔕'}</span>
+          <span className="tavern-dock-text">{soundOn ? 'SFX ON' : 'MUTED'}</span>
         </button>
-      </div>
+      </aside>
 
       {/* Global Error Notification */}
       {state.error && (
@@ -191,13 +181,13 @@ export default function App() {
         )
       )}
 
-      {/* Reconnecting Status Pill */}
+      {/* Reconnecting Status Pill (Bottom-Left) */}
       {state.connecting && (
         <div
           style={{
             position: 'fixed',
             bottom: 20,
-            right: 20,
+            left: 24,
             background: 'var(--bg-card)',
             border: '1px solid var(--border-card)',
             borderRadius: 'var(--radius-sm)',
@@ -209,11 +199,11 @@ export default function App() {
             display: 'flex',
             alignItems: 'center',
             gap: 8,
-            zIndex: 100,
+            zIndex: 1000,
           }}
         >
           <span className="dot dot-amber" />
-          <span>Reconnecting to server...</span>
+          <span>Reconnecting to guild hall...</span>
         </div>
       )}
     </>
