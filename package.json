@@ -1,0 +1,26 @@
+{
+  "name": "the-boardroom-coup",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=apps/server\" \"npm run dev --workspace=apps/web\"",
+    "build": "npm run build --workspace=packages/contracts && npm run build --workspace=packages/game-content && npm run build --workspace=apps/server && npm run build --workspace=apps/web",
+    "start": "node apps/server/dist/index.js",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "typescript": "^5.6.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "esbuild@0.21.5": true
+  }
+}
