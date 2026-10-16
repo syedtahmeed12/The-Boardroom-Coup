@@ -48,16 +48,16 @@ export function HomePage({ onError }: Props) {
       <div style={{ width: '100%', maxWidth: 460 }}>
         {/* Brand Header */}
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
-          <div style={{ display: 'inline-flex', gap: 8, marginBottom: 12 }}>
-            <span className="badge badge-blue">Corporate Strategy & Social Deduction</span>
-            <span className="badge badge-neutral">2–8 Players</span>
+          <div style={{ display: 'inline-flex', gap: 8, marginBottom: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <span className="badge badge-amber">⚔️ Tavern Conclave & Corporate Coup</span>
+            <span className="badge badge-neutral">2–8 Seated</span>
           </div>
 
-          <h1 style={{ fontSize: 32, lineHeight: 1.2, marginBottom: 10, color: 'var(--text-primary)' }}>
+          <h1 style={{ fontSize: 34, lineHeight: 1.2, marginBottom: 12, color: 'var(--text-primary)' }}>
             The Boardroom Coup
           </h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: 14, lineHeight: 1.6 }}>
-            A high-stakes corporate crisis simulation. Sit on the executive board, navigate real-world Wall Street scandals, and privately fulfill your confidential fiduciary agenda.
+            A high-stakes corporate crisis simulation and social deduction conspiracy. Convene in the shadow council, navigate catastrophic scandals, and privately fulfill your confidential agenda.
           </p>
         </div>
 
