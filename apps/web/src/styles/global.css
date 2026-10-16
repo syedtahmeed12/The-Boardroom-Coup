@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=MedievalSharp&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,89 +7,99 @@
 }
 
 :root {
-  /* ── Light Mode (High Contrast & Razor-Sharp Typography) ──────── */
-  --bg-page: #f8fafc;
-  --bg-subtle: #edf2f7;
-  --bg-surface: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-card-active: #e2e8f0;
-  --bg-input: #ffffff;
+  /* ── Medieval Font Family Definitions ────────────────────────────── */
+  --font-royal: 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-tavern: 'MedievalSharp', cursive, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-  /* High-Contrast Borders & Depth */
-  --border-subtle: #cbd5e1;
-  --border-card: #94a3b8;
-  --border-focus: #4338ca;
+  /* ── Light Mode (Daylight Tavern / The Scribe's Illuminated Scroll) ── */
+  --bg-page: #f0e6d2;
+  --bg-subtle: #e6d8bf;
+  --bg-surface: #fbf5e6;
+  --bg-card: rgba(251, 245, 230, 0.95);
+  --bg-card-hover: #fdfaf0;
+  --bg-card-active: #ebdcc2;
+  --bg-input: #fffdf8;
 
-  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08);
-  --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.06);
-  --shadow-hover: 0 10px 25px -3px rgba(15, 23, 42, 0.14), 0 4px 10px -2px rgba(15, 23, 42, 0.08);
-  --shadow-active: 0 0 0 2px #4338ca, 0 8px 24px -2px rgba(67, 56, 202, 0.22);
+  /* Tooled Leather, Antique Iron & Guild Brass Borders */
+  --border-subtle: #cbb490;
+  --border-card: #96744a;
+  --border-focus: #b45309;
 
-  /* Functional Status Colors */
-  --primary: #4338ca;
-  --primary-hover: #3730a3;
-  --primary-light: #e0e7ff;
+  --shadow-sm: 0 1px 4px 0 rgba(44, 24, 10, 0.12);
+  --shadow-card: 0 6px 20px -2px rgba(58, 33, 14, 0.14), 0 2px 6px -1px rgba(58, 33, 14, 0.08);
+  --shadow-hover: 0 12px 28px -4px rgba(58, 33, 14, 0.22), 0 4px 12px -2px rgba(58, 33, 14, 0.12);
+  --shadow-active: 0 0 0 2px #92400e, 0 8px 24px -2px rgba(146, 64, 14, 0.28);
 
-  --success: #047857;
-  --success-hover: #065f46;
-  --success-light: #d1fae5;
+  /* Heraldic & Guild Status Colors */
+  --primary: #853706;
+  --primary-hover: #6d2c03;
+  --primary-light: rgba(133, 55, 6, 0.14);
+
+  --success: #136f4c;
+  --success-hover: #0c5639;
+  --success-light: rgba(19, 111, 76, 0.14);
 
   --warning: #b45309;
   --warning-hover: #92400e;
-  --warning-light: #fef3c7;
+  --warning-light: rgba(180, 83, 9, 0.14);
 
-  --danger: #b91c1c;
-  --danger-hover: #991b1b;
-  --danger-light: #fee2e2;
+  --danger: #9f1c1c;
+  --danger-hover: #831414;
+  --danger-light: rgba(159, 28, 28, 0.14);
 
-  --accent-purple: #6d28d9;
-  --accent-purple-light: #ede9fe;
+  --accent-purple: #6b21a8;
+  --accent-purple-light: rgba(107, 33, 168, 0.14);
 
-  --accent-blue: #0369a1;
-  --accent-blue-light: #e0f2fe;
+  --accent-blue: #1e40af;
+  --accent-blue-light: rgba(30, 64, 175, 0.14);
 
-  /* High-Contrast Text */
-  --text-primary: #020617;
-  --text-secondary: #0f172a;
-  --text-muted: #334155;
-  --text-subtle: #475569;
+  /* Deep Walnut Gall Ink - Maximum Legibility */
+  --text-primary: #1c0e05;
+  --text-secondary: #331c0c;
+  --text-muted: #5e3b1c;
+  --text-subtle: #7d5229;
+
+  --gold-accent: #b48324;
+  --iron-accent: #4a3321;
 
   --radius-sm: 6px;
-  --radius-md: 12px;
+  --radius-md: 10px;
   --radius-lg: 16px;
   --radius-full: 9999px;
 
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.5;
   color: var(--text-primary);
   background: var(--bg-page);
 }
 
-/* ── Dark Mode (Bloomberg Executive Obsidian Palette) ─────────────── */
+/* ── Dark Mode (Candlelit Tavern Cellar / Secret Guild Conclave) ──── */
 [data-theme="dark"] {
-  --bg-page: #07090f;
-  --bg-subtle: #0d121c;
-  --bg-surface: #111724;
-  --bg-card: #131b2c;
-  --bg-card-hover: #192338;
-  --bg-card-active: #202d46;
-  --bg-input: #0a0e17;
+  --bg-page: #0d0703;
+  --bg-subtle: #160d07;
+  --bg-surface: #1c1109;
+  --bg-card: rgba(28, 17, 9, 0.94);
+  --bg-card-hover: #26170d;
+  --bg-card-active: #321e11;
+  --bg-input: #120904;
 
-  --border-subtle: #24324d;
-  --border-card: #3a4d73;
-  --border-focus: #818cf8;
+  /* Hand-Forged Wrought Iron & Antique Brass */
+  --border-subtle: #3a2211;
+  --border-card: #5e371a;
+  --border-focus: #d97706;
 
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.55), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 10px 25px -3px rgba(0, 0, 0, 0.65), 0 4px 10px -2px rgba(0, 0, 0, 0.45);
-  --shadow-active: 0 0 0 2px #818cf8, 0 8px 24px -2px rgba(129, 140, 248, 0.35);
+  --shadow-sm: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 8px 28px -2px rgba(0, 0, 0, 0.8), 0 0 15px rgba(217, 119, 6, 0.08);
+  --shadow-hover: 0 14px 34px -3px rgba(0, 0, 0, 0.9), 0 0 22px rgba(217, 119, 6, 0.18);
+  --shadow-active: 0 0 0 2px #d97706, 0 8px 28px -2px rgba(217, 119, 6, 0.35);
 
-  /* Vivid Neon Corporate Status Colors */
-  --primary: #6366f1;
-  --primary-hover: #818cf8;
-  --primary-light: rgba(99, 102, 241, 0.22);
+  /* Torchlight & Glowing Embers Status Colors */
+  --primary: #d97706;
+  --primary-hover: #f59e0b;
+  --primary-light: rgba(217, 119, 6, 0.22);
 
   --success: #10b981;
   --success-hover: #34d399;
@@ -103,36 +113,46 @@
   --danger-hover: #f87171;
   --danger-light: rgba(239, 68, 68, 0.24);
 
-  --accent-purple: #a855f7;
-  --accent-purple-light: rgba(168, 85, 247, 0.22);
+  --accent-purple: #c084fc;
+  --accent-purple-light: rgba(192, 132, 252, 0.22);
 
   --accent-blue: #38bdf8;
   --accent-blue-light: rgba(56, 189, 248, 0.22);
 
-  /* High-Contrast Crisp White Text */
-  --text-primary: #ffffff;
-  --text-secondary: #f1f5f9;
-  --text-muted: #cbd5e1;
-  --text-subtle: #94a3b8;
+  /* Candlelit Vellum Parchment White */
+  --text-primary: #fff8e7;
+  --text-secondary: #fce7b0;
+  --text-muted: #d4b584;
+  --text-subtle: #a08055;
+
+  --gold-accent: #f59e0b;
+  --iron-accent: #2e1a0d;
 }
 
+/* ── Atmospheric Medieval Tavern Background ──────────────────────── */
 body {
   min-height: 100vh;
   background-color: var(--bg-page);
   color: var(--text-primary);
+  /* Light Mode: Scribe's parchment scroll texture + soft amber hearth light */
   background-image:
-    radial-gradient(at 0% 0%, rgba(67, 56, 202, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(3, 105, 161, 0.07) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(109, 40, 217, 0.05) 0px, transparent 50%);
+    radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 30%, rgba(133, 55, 6, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 70%, rgba(180, 83, 9, 0.06) 0%, transparent 50%),
+    /* Subtle medieval vellum fiber grain */
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='4' result='noise'/%3E%3CfeColorMatrix type='matrix' values='0.7 0 0 0 0 0 0.6 0 0 0 0 0 0.5 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
   background-attachment: fixed;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 [data-theme="dark"] body {
+  /* Night Mode: Deep candlelit tavern with dark rustic oak planks & hearth fire glow */
   background-image:
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.08) 0px, transparent 50%);
+    radial-gradient(ellipse at 50% 100%, rgba(217, 119, 6, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 25%, rgba(180, 83, 9, 0.14) 0%, transparent 45%),
+    /* Authentic medieval timber plank texture */
+    url("data:image/svg+xml,%3Csvg width='180' height='90' viewBox='0 0 180 90' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 44 h180 M0 88 h180' stroke='%23221308' stroke-width='1.5' stroke-opacity='0.45'/%3E%3Ccircle cx='12' cy='22' r='2' fill='%23382010' opacity='0.3'/%3E%3Ccircle cx='168' cy='22' r='2' fill='%23382010' opacity='0.3'/%3E%3Ccircle cx='90' cy='66' r='2' fill='%23382010' opacity='0.3'/%3E%3Cpath d='M30 0 C45 20, 40 35, 60 44 M120 44 C135 60, 130 75, 150 88' stroke='%23331b0c' stroke-width='0.7' stroke-opacity='0.25' fill='none'/%3E%3C/svg%3E");
 }
 
 #root {
@@ -141,47 +161,53 @@ body {
   flex-direction: column;
 }
 
-/* ── Typography & Headings ───────────────────────────────────────── */
+/* ── Medieval Typography & Titles ────────────────────────────────── */
 .label-xs {
+  font-family: var(--font-royal);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 
 .label-sm {
+  font-family: var(--font-royal);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   color: var(--text-secondary);
 }
 
 .mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
 h1 {
-  font-size: 30px;
+  font-family: var(--font-royal);
+  font-size: 32px;
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: 0.02em;
   color: var(--text-primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2 {
-  font-size: 20px;
+  font-family: var(--font-royal);
+  font-size: 22px;
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.01em;
   color: var(--text-primary);
 }
 
 h3 {
-  font-size: 16px;
+  font-family: var(--font-royal);
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
-/* ── Clean Glass & Executive Cards ───────────────────────────────── */
+/* ── Medieval Tavern Timber Cards ────────────────────────────────── */
 .glass-card {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
@@ -189,8 +215,26 @@ h3 {
   border: 1px solid var(--border-card);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-md);
-  padding: 22px;
-  transition: all 0.2s ease;
+  padding: 24px;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle corner rivets/insets for authentic tavern furniture feel */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(217, 119, 6, 0.08);
+  border-radius: calc(var(--radius-md) - 2px);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .glass-card::before {
+  border-color: rgba(245, 158, 11, 0.12);
 }
 
 .glass-card-interactive {
@@ -199,133 +243,149 @@ h3 {
 
 .glass-card-interactive:hover {
   background: var(--bg-card-hover);
-  border-color: var(--primary);
+  border-color: var(--border-focus);
   box-shadow: var(--shadow-hover);
   transform: translateY(-2px);
 }
 
 .glass-card-active {
   background: var(--bg-card-active);
-  border-color: var(--primary);
+  border-color: var(--border-focus);
   box-shadow: var(--shadow-active);
 }
 
-/* ── Functional Buttons ──────────────────────────────────────────── */
+/* ── Wax Seal & Leather-Bound Buttons ────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 20px;
+  padding: 11px 22px;
   border-radius: var(--radius-sm);
-  font-family: inherit;
-  font-size: 14px;
+  font-family: var(--font-royal);
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   text-decoration: none;
+  position: relative;
 }
 
 .btn:active:not(:disabled) {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 .btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+  filter: grayscale(0.5);
 }
 
+/* Royal Crimson Wax Seal Button */
 .btn-primary {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #991b1b 0%, #b91c1c 50%, #7f1d1d 100%);
+  color: #fff6e0;
+  border: 1px solid #dc2626;
+  box-shadow: 0 2px 8px rgba(153, 27, 27, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: var(--primary-hover);
-  border-color: var(--primary-hover);
-  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.35);
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 50%, #991b1b 100%);
+  border-color: #f87171;
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
 }
 
+/* Wrought Iron & Dark Timber Button */
 .btn-secondary {
   background: var(--bg-card);
   color: var(--text-primary);
-  border-color: var(--border-card);
+  border: 1px solid var(--border-card);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover:not(:disabled) {
   background: var(--bg-card-hover);
-  border-color: var(--text-primary);
+  border-color: var(--border-focus);
+  color: var(--gold-accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
 }
 
+/* Forest Guildmaster Emerald Seal Button */
 .btn-success {
-  background: var(--success);
-  color: #ffffff;
-  border-color: var(--success);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #065f46 0%, #047857 50%, #064e3b 100%);
+  color: #f0fdf4;
+  border: 1px solid #10b981;
+  box-shadow: 0 2px 8px rgba(4, 120, 87, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn-success:hover:not(:disabled) {
-  background: var(--success-hover);
-  border-color: var(--success-hover);
+  background: linear-gradient(135deg, #047857 0%, #059669 50%, #047857 100%);
+  border-color: #34d399;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.5);
+  transform: translateY(-1px);
 }
 
 .btn-danger {
-  background: var(--danger);
-  color: #ffffff;
-  border-color: var(--danger);
+  background: #991b1b;
+  color: #fff;
+  border-color: #dc2626;
 }
 
 .btn-danger:hover:not(:disabled) {
-  background: var(--danger-hover);
+  background: #b91c1c;
 }
 
 .btn-ghost {
   background: transparent;
   color: var(--text-primary);
-  border-color: var(--border-card);
+  border: 1px solid var(--border-subtle);
 }
 
 .btn-ghost:hover:not(:disabled) {
   background: var(--bg-card-hover);
-  color: var(--text-primary);
-  border-color: var(--text-primary);
-  box-shadow: var(--shadow-sm);
+  border-color: var(--border-focus);
+  color: var(--gold-accent);
 }
 
 .btn-sm {
-  padding: 6px 12px;
-  font-size: 12px;
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
 }
 
 .btn-lg {
-  padding: 14px 26px;
-  font-size: 15px;
+  padding: 14px 28px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
 }
 
-/* ── Form Inputs ────────────────────────────────────────────────── */
+/* ── Scribe's Inscription Inputs ─────────────────────────────────── */
 input[type="text"] {
   width: 100%;
   background: var(--bg-input);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
-  font-family: inherit;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
-  padding: 11px 14px;
+  padding: 12px 16px;
   outline: none;
-  transition: all 0.15s ease;
-  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 input[type="text"]:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 input[type="text"]::placeholder {
@@ -333,73 +393,77 @@ input[type="text"]::placeholder {
   font-weight: 500;
 }
 
-/* ── Progress Meter Bars ────────────────────────────────────────── */
+/* ── Molten Liquid Meter Tracks (Budget, Trust, Morale) ──────────── */
 .meter-container {
   margin-bottom: 16px;
 }
 
 .meter-track {
-  height: 10px;
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-subtle);
+  height: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-full);
   overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .meter-fill {
   height: 100%;
   border-radius: var(--radius-full);
-  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ── High-Contrast Status Badges ────────────────────────────────── */
+/* ── Heraldic Wax Seal Status Badges ─────────────────────────────── */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 9px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
+  font-family: var(--font-royal);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.badge-blue {
-  background: var(--primary-light);
-  color: var(--primary);
-  border: 1px solid var(--primary);
-}
-
-.badge-green {
-  background: var(--success-light);
-  color: var(--success);
-  border: 1px solid var(--success);
-}
-
+/* Royal Treasury Gold */
 .badge-amber {
   background: var(--warning-light);
   color: var(--warning);
   border: 1px solid var(--warning);
 }
 
+/* Guild Solvency Emerald */
+.badge-green {
+  background: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+/* Blood Wax Seal / Crisis */
 .badge-red {
   background: var(--danger-light);
   color: var(--danger);
   border: 1px solid var(--danger);
 }
 
+/* Imperial Decree Purple */
 .badge-purple {
   background: var(--accent-purple-light);
   color: var(--accent-purple);
   border: 1px solid var(--accent-purple);
 }
 
-.badge-cyan {
+/* Royal Order Blue */
+.badge-blue {
   background: var(--accent-blue-light);
   color: var(--accent-blue);
   border: 1px solid var(--accent-blue);
 }
 
+/* Wrought Iron Neutral */
 .badge-neutral {
   background: var(--bg-subtle);
   color: var(--text-primary);
@@ -414,9 +478,9 @@ input[type="text"]::placeholder {
   display: inline-block;
 }
 
-.dot-green { background: var(--success); box-shadow: 0 0 6px var(--success); }
-.dot-amber { background: var(--warning); box-shadow: 0 0 6px var(--warning); }
-.dot-red { background: var(--danger); box-shadow: 0 0 6px var(--danger); }
+.dot-green { background: var(--success); box-shadow: 0 0 8px var(--success); }
+.dot-amber { background: var(--warning); box-shadow: 0 0 8px var(--warning); }
+.dot-red { background: var(--danger); box-shadow: 0 0 8px var(--danger); }
 .dot-muted { background: var(--text-subtle); }
 
 /* ── Layout & Header ────────────────────────────────────────────── */
@@ -440,9 +504,10 @@ input[type="text"]::placeholder {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 24px 20px 48px;
+  padding: 24px 20px 80px; /* Ample bottom padding to ensure floating dock never overlaps content */
 }
 
+/* Sticky App Header: Clean, balanced, and zero overlap */
 .app-header {
   display: flex;
   align-items: center;
@@ -454,14 +519,16 @@ input[type="text"]::placeholder {
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .app-header-brand {
-  font-size: 17px;
+  font-family: var(--font-royal);
+  font-size: 18px;
   font-weight: 800;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
+  letter-spacing: 0.08em;
+  color: var(--gold-accent);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .section-header {
@@ -498,7 +565,7 @@ input[type="text"]::placeholder {
   background: var(--danger-light);
   border: 1px solid var(--danger);
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-card);
 }
 
 /* ── Simple Loading Indicator ───────────────────────────────────── */
@@ -510,4 +577,58 @@ input[type="text"]::placeholder {
   border: 1px solid var(--border-card);
   font-size: 13px;
   color: var(--text-primary);
+}
+
+/* ── Floating Medieval Tavern Utility Dock (Theme & SFX) ────────── */
+/* Placed at Bottom-Right so it NEVER collides with header buttons or round info */
+.tavern-control-dock {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  gap: 10px;
+  padding: 6px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 12px rgba(217, 119, 6, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.tavern-dock-btn {
+  border-radius: var(--radius-full) !important;
+  padding: 7px 14px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tavern-dock-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.tavern-dock-text {
+  font-family: var(--font-royal);
+}
+
+/* Responsive adjust for mobile */
+@media (max-width: 600px) {
+  .tavern-control-dock {
+    bottom: 12px;
+    right: 12px;
+    gap: 6px;
+    padding: 4px 6px;
+  }
+  .tavern-dock-btn {
+    padding: 6px 10px !important;
+  }
+  .tavern-dock-text {
+    font-size: 10px;
+  }
 }
